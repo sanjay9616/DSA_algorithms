@@ -1,10 +1,13 @@
-def bubbleSort(Arr):
+def selectionSort(Arr):
     n = len(Arr)
     for i in range(n):
-        for j in range(n-i-1):
-            if (Arr[j] > Arr[j+1]):
-                Arr[j], Arr[j+1] = Arr[j+1], Arr[j]
+        minimum = i
+        for j in range(i+1, n):
+            if (Arr[j] < Arr[minimum]):
+                minimum = j
+        if(minimum != i):
+            Arr[i], Arr[minimum] = Arr[minimum], Arr[i]
     return Arr
 
 
-print(bubbleSort([5, 3, 3, 6, 7, 2]))
+print(selectionSort([5, 3, 0, 0, 1, 2]))
