@@ -1,13 +1,16 @@
-def insertionSort(Arr):
+def shellSort(Arr):
     n = len(Arr)
-    for i in range(1, n):
-        temp = Arr[i]
-        j = i-1
-        while (j >= 0 and Arr[j] > temp):
-            Arr[j+1] = Arr[j]
-            j -= 1
-        Arr[j+1] = temp
+    gap = n // 2
+    while gap > 0:
+        for i in range(gap, n):
+            temp = Arr[i]
+            j = i
+            while j >= gap and Arr[j - gap] > temp:
+                Arr[j] = Arr[j - gap]
+                j -= gap
+            Arr[j] = temp
+        gap //= 2
     return Arr
 
 
-print(insertionSort([5, 3, 0, 0, 1, 2]))
+print(shellSort([-1, 3, 0, 0, 1, 2]))
