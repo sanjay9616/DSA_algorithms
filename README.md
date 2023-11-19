@@ -1,7 +1,8 @@
 # Shell Sort
 Shell sort is a highly efficient sorting algorithm and is based on insertion sort algorithm. This algorithm avoids large shifts as in case of insertion sort, if the smaller value is to the far right and has to be moved to the far left.
 
-Algorithm
+<h3> Algorithm </h3>
+
 Step 1 − Initialize the value of h <br/>
 Step 2 − Divide the list into smaller sub-list of equal interval h <br/>
 Step 3 − Sort these sub-lists using insertion sort <br/>
