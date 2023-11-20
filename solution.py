@@ -1,4 +1,4 @@
-def shellSort(Arr):
+def quickSort(Arr):
     n = len(Arr)
     gap = n // 2
     while gap > 0:
@@ -13,4 +13,4 @@ def shellSort(Arr):
     return Arr
 
 
-print(shellSort([-1, 3, 0, 0, 1, 2]))
+print(quickSort([-1, 3, 0, 0, 1, 2]))
